@@ -1,0 +1,230 @@
+/* PC */
+@media screen and (min-width: 992px) {
+    .mobie-header {
+        display: none;
+    }
+    .toggle-menu {
+        display: none;
+    }
+    .show-on-mobie {
+        display: none;
+    }
+}
+/* Tablet & Mobie */
+@media screen and (max-width: 991px) {
+    .navbar {
+        position: relative;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    .toggle-menu svg {
+        width: 34px;
+        font-size: 2rem;
+        color: #707070;
+    }
+
+    .navbar .logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .menu-overlay {
+        position: fixed;
+        z-index: 1;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.25 ease;
+    }
+    .menu-drawer {
+        position: fixed;
+        padding: 60px 0 0 60px;
+        z-index: 2;
+        background: #fff;
+        inset: 0 40% 0 0;
+        transform: translateX(-100%);
+        transition: 0.25s ease;
+    }
+
+    .menu-drawer #mobieNav {
+        margin-top: 32px;
+    }
+    .menu-drawer #mobieNav a {
+        padding: 14px 0;
+        display: block;
+        font-size: 2rem;
+        font-weight: 500;
+        color: #010101;
+    }
+
+    .responsive-check:checked ~ .menu-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .responsive-check:checked ~ .menu-drawer {
+        transform: translateX(0);
+    }
+
+    .separate {
+        border-top: 2px solid #ebebeb;
+    }
+
+    .header {
+        height: 100%;
+    }
+
+    .hero .hero-img {
+        display: none;
+    }
+
+    .hero .info {
+        width: 62%;
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 50px;
+    }
+
+    .Client .brand {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+    }
+    .list-guide {
+        column-gap: 40px;
+    }
+
+    .guide-item {
+        padding: 0;
+        flex: 1;
+    }
+
+    .guide-item-desc {
+        display: flex;
+        justify-content: center;
+    }
+
+    .feature .list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats .stat-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stats .info-block {
+        order: 1;
+        width: 100%;
+        padding: 0;
+    }
+
+    .stats .img-block {
+        order: 2;
+        width: 100%;
+        margin: 50px;
+    }
+
+    .stats .info-block .title {
+        width: 80%;
+    }
+
+    .stats .info-block .desc {
+        width: 80%;
+    }
+
+    .qty {
+        justify-content: space-between;
+        column-gap: 40px;
+    }
+
+    .sub-img {
+        display: none;
+    }
+}
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .show-on-mobie {
+        display: none;
+    }
+}
+/* Mobie */
+@media screen and (max-width: 767px) {
+    .hide-on-mobie {
+        display: none;
+    }
+
+    .menu-drawer {
+        padding: 40px;
+        inset: 0 30% 0 0;
+    }
+    .show-on-mobie {
+        display: block;
+    }
+    .action {
+        display: none;
+    }
+    .hero {
+        margin-top: 34px;
+    }
+    .hero .info {
+        width: 90%;
+    }
+
+    .Client .brand {
+        margin-top: 40px;
+        flex-direction: column;
+    }
+    .list-guide {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+    .feature .list {
+        grid-template-columns: 1fr;
+    }
+    .feature .content .header-title {
+        text-align: center;
+    }
+    .feature .content .header-desc {
+        margin-top: 40px;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .stats .info-block .desc {
+        width: 100%;
+        text-align: center;
+    }
+    .stats .img-block .image {
+        width: 100%;
+    }
+    .qty {
+        flex-direction: column;
+        row-gap: 40px;
+        align-items: center;
+        justify-content: center;
+    }
+    .qty .qty-item:first-child {
+        margin: 0;
+    }
+    .sub-container {
+        height: auto;
+    }
+
+    .sub-container .info {
+        padding: 32px;
+    }
+    .footer .column{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .footer .item-desc{
+        width: 100%;
+    }
+}
