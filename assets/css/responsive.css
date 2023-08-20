@@ -1,8 +1,86 @@
 /* PC */
 @media screen and (min-width: 992px) {
+    .toggle-menu {
+        display: none;
+    }
+    .responsive-header {
+        display: none;
+    }
 }
 /* Tablet & Mobie */
 @media screen and (max-width: 991px) {
+    .nav {
+        display: none;
+    }
+    .logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .toggle-menu {
+        font-size: 2.5rem;
+    }
+    .menu-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 5;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s ease;
+    }
+    .menu-drawer {
+        position: fixed;
+        inset: 0 40% 0 0;
+        background: #fff;
+        z-index: 6;
+        transform: translateX(-100%);
+    }
+    .responsive-checkbox:checked ~ .menu-overlay {
+        visibility: visible;
+        opacity: 1;
+    }
+    .responsive-checkbox:checked ~ .menu-drawer {
+        transform: translateX(0);
+    }
+    .hero__content {
+        padding: 0;
+    }
+    .hero-card1 {
+        left: -5rem;
+    }
+    .hero-card2 {
+        right: 0;
+    }
+    .payments-top__media,
+    .payments-bottom__content {
+        margin-top: 4rem;
+    }
+    .hero__heading {
+        font-size: 4rem;
+    }
+    .work-card1 {
+        right: -5.3rem;
+        top: 14rem;
+    }
+    .work-card2 {
+        right: -6rem;
+    }
+    .blog-item + .blog-item{
+        margin-top: 0;
+    }
+
+    .blog-item__body:first-child {
+        margin-top: 3rem;
+    }
+    .download__decor{
+        display: none;
+    }
+    .footer__inner{
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
 }
 
 /* Tablet */
@@ -10,4 +88,45 @@
 }
 /* Mobie */
 @media screen and (max-width: 767px) {
+    
+    .header-btn{
+        display: none;
+    }
+    .logo{
+        top: 0;
+        left: unset;
+        right: 0;
+        transform: translate(0);
+    }
+    .toggle-menu{
+        font-size: 1.6rem;
+    }
+    .footer__inner{
+        grid-template-columns: auto;
+        
+    }
+    .hide-on-mobie{
+        display: none;
+    }
+    .payments-bottom-card2{
+        right: -7rem;
+        bottom: unset;
+        top: 0;
+    }
+    .download__store,.footer__form ,.blog-top,.hero-form{
+        flex-wrap: wrap;
+        row-gap: 3rem;
+    }
+    .payments-bottom__img-wrap{
+        width: 100%;
+    }
+    .blog-item__body{
+        flex-direction: column;
+        row-gap: 3rem;
+    }
+    .blog-item__img-wrap{
+        width: auto;
+        height: auto;
+    }
+    
 }
